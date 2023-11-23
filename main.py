@@ -1,8 +1,22 @@
-"""
-Creación de un programa que imite a el ajedrez en python
-"""
+import entradas
+import render
+import config
 
 def main():
-	print("Hello World")
 
-main()
+	# Bucle principal del programa, se ejecutará mientras el valor de ejecutar sea True
+	while (True):
+
+		# Actualiza el valor del número de turno
+		render.num_turno()
+
+		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
+		entradas.movimiento()
+
+		# Comprueba si el programa debe salir o continuar
+		entradas.salir()
+
+
+# Inicializa a main
+if __name__ == "__main__":
+	main()
