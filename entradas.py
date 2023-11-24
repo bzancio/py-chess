@@ -1,7 +1,7 @@
 import keyboard
 import sys
 
-# Examina si se ha presionado la tecla esc y si eso ocurre sale del programa o, por el contrario, se ha presionado espacio, en cuyo caso el programa continuará normalmente
+# Examina si se ha presionado la tecla esc y si eso ocurre sale del programa o, si por el contrario, se ha presionado espacio, en cuyo caso el programa continuará normalmente
 def salir():
 	while(True):
 		if keyboard.is_pressed('esc'):
