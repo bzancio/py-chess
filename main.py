@@ -10,10 +10,12 @@ def main():
 		# Actualiza el valor del número de turno
 		render.num_turno()
 
+		# Prueba de render
+		render.casilla()
+
 		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
 		entradas.movimiento()
 
-		render.casilla()
 		# Comprueba si el programa debe salir o continuar
 		entradas.salir()
 
