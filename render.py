@@ -13,7 +13,7 @@ def num_turno():
 def casillas():
 	for i in range(1, 9):
 		print("  +-----+-----+-----+-----+-----+-----+-----+-----+ ")
-		for i in range(1, 8):
+		for i in range(1, 9):
 			print("  |   ", end='')
-		print("  |     ")
+		print("  |")
 	print("  +-----+-----+-----+-----+-----+-----+-----+-----+ ")

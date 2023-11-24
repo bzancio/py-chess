@@ -11,7 +11,7 @@ def main():
 		render.num_turno()
 
 		# Prueba de render
-		render.casilla()
+		render.casillas()
 
 		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
 		entradas.movimiento()
