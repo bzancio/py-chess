@@ -9,11 +9,6 @@ def num_turno():
 	# Devuelve el número de turno incrementado en uno
 	config.num_turno += 1
 
-# Renderiza el tablero vacio
-def casillas():
-	for i in range(1, 9):
-		print("  +-----+-----+-----+-----+-----+-----+-----+-----+ ")
-		for i in range(1, 9):
-			print("  |   ", end='')
-		print("  |")
-	print("  +-----+-----+-----+-----+-----+-----+-----+-----+ ")
+# Renderiza el tablero
+def tablero():
+	pass
