@@ -4,11 +4,14 @@ import config
 
 def main():
 
-	# Bucle principal del programa, se ejecutará mientras el valor de ejecutar sea True
+	# Bucle principal del programa, se ejecutará continuamente
 	while (True):
 
 		# Actualiza el valor del número de turno
 		render.num_turno()
+
+		# Prueba de render
+		render.casillas()
 
 		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
 		entradas.movimiento()
