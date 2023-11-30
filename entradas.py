@@ -18,6 +18,7 @@ def salir():
 # Espera a que el usuario introduzca el movimiento por pantalla y guarda ese valor en la variable mov
 def movimiento():
 	mov = input("Introduce un movimiento: ")
+	return mov
 
 """
  En un futuro, esto interactuará con logica.py o clases.py para hacer cosos, de momento es para probar a parar el programa

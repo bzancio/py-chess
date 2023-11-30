@@ -40,8 +40,9 @@ class Tablero():
 
 	def __init__(self):
 
-		#Indica que hay en cada casillad el tablero al principio de la partida, cada casilla llama a una pieza
+		#Indica que hay en cada casilla del tablero al principio de la partida, cada casilla llama a una pieza
 		self.casillas_tablero = {
+
 			(8, 1): Torre("negro"),
 			(8, 2): Caballo("negro"),
 			(8, 3): Alfil("negro"),
@@ -59,6 +60,42 @@ class Tablero():
 			(7, 6): Peon("negro"),
 			(7, 7): Peon("negro"),
 			(7, 8): Peon("negro"),
+
+			(6, 1): None,
+			(6, 2): None,
+			(6, 3): None,
+			(6, 4): None,
+			(6, 5):	None,
+			(6, 6): None,
+			(6, 7): None,
+			(6, 8): None,
+
+			(5, 1): None,
+			(5, 2): None,
+			(5, 3): None,
+			(5, 4): None,
+			(5, 5):	None,
+			(5, 6): None,
+			(5, 7): None,
+			(5, 8): None,
+
+			(4, 1): None,
+			(4, 2): None,
+			(4, 3): None,
+			(4, 4): None,
+			(4, 5):	None,
+			(4, 6): None,
+			(4, 7): None,
+			(4, 8): None,
+
+			(3, 1): None,
+			(3, 2): None,
+			(3, 3): None,
+			(3, 4): None,
+			(3, 5):	None,
+			(3, 6): None,
+			(3, 7): None,
+			(3, 8): None,
 
 			(2, 1): Peon("blanco"),
 			(2, 2): Peon("blanco"),
@@ -81,11 +118,17 @@ class Tablero():
 
 	# Permite almacenar piezas en el lugar deseado
 	def colocar_pieza(self, posicion, pieza):
-		self.casillas_tablero[posicion] = pieza
+		if posicion in self.casillas_tablero:
+			self.casillas_tablero[posicion] = pieza
+		else:
+			print("calentada")
 
 	# Devulve lo que contiene una posicion del tablero
 	def obtener_pieza(self, posicion):
-		return self.casillas_tablero.get(posicion, None)
+		if posicion in self.casillas_tablero:
+			return self.casillas_tablero.get(posicion, None)
+		else:
+			print("calentada")
 
 	# Permite eliminar piezas de las casillas
 	def eliminar_pieza(self, posicion):
