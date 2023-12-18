@@ -4,10 +4,50 @@ class Pieza:
 		self.color = color
 
 
-class Peon(Pieza):
+class Peon:
+    def _init_(self, color, fila, columna):
+        self.color = color  # 'blanco' o 'negro'
+        self.fila = fila    # 1-8
+        self.columna = columna  # 'a'-'h'
+        self.movimientos = 0  # Contador de movimientos para controlar el movimiento inicial de dos casillas
 
-	def __init__(self, color):
-		super().__init__(color)
+    def mover(self, nueva_fila, nueva_columna):
+        # Mira que el movimiento es dentro del tablero
+        if not self._es_movimiento_valido(nueva_fila, nueva_columna):
+            print("Movimiento no válido.")
+            return
+
+        # Verificar movimiento inicial de dos casillas
+        if self._es_primer_movimiento() and abs(nueva_fila - self.fila) == 2:
+            self.movimientos += 2
+        else:
+            self.movimientos += 1
+
+        # Realizar el movimiento
+        self.fila = nueva_fila
+        self.columna = nueva_columna
+
+        # Puedes implementar lógica adicional, como captura al paso o promoción, según las reglas del ajedrez.
+
+    def _es_movimiento_valido(self, nueva_fila, nueva_columna):
+        # Verificar que el movimiento esté dentro del tablero
+        if not (1 <= nueva_fila <= 8 and 'a' <= nueva_columna <= 'h'):
+            return False
+
+        # Verificar que el movimiento sea en una dirección válida según el color del peón
+        if (self.color == 'blanco' and nueva_fila <= self.fila) or \
+           (self.color == 'negro' and nueva_fila >= self.fila):
+            return False
+
+        # Otros chequeos de reglas de movimiento del peón pueden ser agregados aquí
+
+        return True
+
+    def _es_primer_movimiento(self):
+        return self.movimientos == 0
+
+    def _str_(self):
+        return f'Peón {self.color} en {self.columna}{self.fila}'
 
 class Torre(Pieza):
 
