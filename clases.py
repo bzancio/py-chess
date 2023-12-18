@@ -116,6 +116,10 @@ class Tablero():
 			(1, 8): Torre("blanco"),
 		}
 
+	# Permite obtener la situación del tablero
+	def obtener_posicion(self):
+		return self.casillas_tablero
+
 	# Permite almacenar piezas en el lugar deseado
 	def colocar_pieza(self, posicion, pieza):
 		if posicion in self.casillas_tablero:

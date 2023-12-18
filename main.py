@@ -14,6 +14,8 @@ def main():
 
 		# Actualiza el valor del número de turno
 		render.num_turno()
+	
+		render.tablero(tablero)
 
 		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
 		entradas.movimiento()

@@ -1,4 +1,6 @@
 import config
+import clases
+import main
 
 # Renderiza el número de turno y devuelve ese número más uno
 def num_turno():
@@ -10,5 +12,12 @@ def num_turno():
 	config.num_turno += 1
 
 # Renderiza el tablero
-def tablero():
-	pass
+def tablero(tablero):
+
+	pos = tablero.obtener_posicion()
+	for posicion, pieza in pos.items():
+		print(f"En la posición {posicion}")
+		if pieza != None:
+			print(f"hay una pieza {type(pieza).__name__} de color {pieza.color}")
+		else:
+			print("No hay nada")
