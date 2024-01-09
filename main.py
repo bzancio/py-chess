@@ -14,7 +14,11 @@ def main():
 
 		# Actualiza el valor del número de turno
 		render.num_turno()
-	
+
+		# Renderiza el tablero en modo dev (mostrando posición directamente)
+		render.dev_tablero(tablero)
+
+		# Renderiza el tablero de forma grafica (en desarrollo)
 		render.tablero(tablero)
 
 		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
