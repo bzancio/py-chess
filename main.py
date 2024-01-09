@@ -18,7 +18,7 @@ def main():
 		render.tablero(tablero)
 
 		# Pregunta en cada turno qué movimiento quiere hacer el usuario (actualmente inútil)
-		entradas.movimiento()
+		entradas.movimiento(tablero)
 
 		# Comprueba si el programa debe salir o continuar
 		entradas.salir()

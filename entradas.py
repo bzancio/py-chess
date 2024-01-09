@@ -1,5 +1,7 @@
 import keyboard
 import sys
+import clases
+import main
 
 # Examina si se ha presionado la tecla esc y si eso ocurre sale del programa o, si por el contrario, se ha presionado espacio, en cuyo caso el programa continuará normalmente
 def salir():
@@ -16,9 +18,10 @@ def salir():
 
 
 # Espera a que el usuario introduzca el movimiento por pantalla y guarda ese valor en la variable mov
-def movimiento():
+def movimiento(tablero):
 	mov = input("Introduce un movimiento: ")
-	return mov
+	if mov == "test":
+		tablero.mover_pieza((2, 4),(4, 4))
 
 """
  En un futuro, esto interactuará con logica.py o clases.py para hacer cosos, de momento es para probar a parar el programa

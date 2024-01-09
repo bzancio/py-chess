@@ -46,8 +46,8 @@ class Tablero():
 			(8, 1): Torre("negro"),
 			(8, 2): Caballo("negro"),
 			(8, 3): Alfil("negro"),
-			(8, 5): Rey("negro"),
-			(8, 4): Dama("negro"),
+			(8, 4): Rey("negro"),
+			(8, 5): Dama("negro"),
 			(8, 6): Alfil("negro"),
 			(8, 7): Caballo("negro"),
 			(8, 8): Torre("negro"),
@@ -137,7 +137,7 @@ class Tablero():
 	# Permite eliminar piezas de las casillas
 	def eliminar_pieza(self, posicion):
 		if posicion in self.casillas_tablero:
-			del self.casillas_tablero[posicion]
+			self.casillas_tablero[posicion] = None
 		else:
 			print("No hay una pieza en esa posición.")
 
